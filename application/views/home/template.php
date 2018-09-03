@@ -9,10 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/styles.css') ?>">
 </head>
 <body>
-  <div class="col-lg-12">
     <h1 class="text-center text-primary mt-4">PlanetaRD </h1>
-  <span class="text-center"><?php $fecha = getdate(); echo "Hoy es $fecha[weekday], $fecha[mday] de $fecha[month] del $fecha[year]";?></span>
-  </div>
+    <span class="text-center"><?php $fecha = getdate(); echo "Hoy es $fecha[weekday], $fecha[mday] de $fecha[month] del $fecha[year]";?></span>
  <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
