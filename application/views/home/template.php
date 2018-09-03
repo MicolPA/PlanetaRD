@@ -11,7 +11,7 @@
 <body>
   <div class="col-lg-12">
     <h1 class="text-center text-primary mt-4">PlanetaRD </h1>
-  <span class="text-center"><?php $fecha = getdate(); echo "Hoy es: $fecha[weekday], $fecha[mday] de $fecha[month] de $fecha[year]";?></span>
+  <span class="text-center"><?php $fecha = getdate(); echo "Hoy es $fecha[weekday], $fecha[mday] de $fecha[month] del $fecha[year]";?></span>
   </div>
  <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
 
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
           <ul class="navbar-nav">
-            
+
             <li class="nav-item pl-4">
               <a class="nav-link text-white" href="#">Nacionales</a>
             </li>
@@ -39,7 +39,7 @@
             <li class="nav-item pl-4">
               <a class="nav-link text-white" href="#">Opinión</a>
             </li>
-           
+
           </ul>
         </div>
       </nav>
