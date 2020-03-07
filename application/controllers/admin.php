@@ -55,6 +55,7 @@ class admin extends CI_Controller{
 	        $url
 	    );
 
+	    $url = strtolower($url);
 	    $url = str_replace(' ', '-', $url);
 	    $url = preg_replace("/[^a-zA-Z0-9_-]+/", '', $url);
 
@@ -104,7 +105,7 @@ class admin extends CI_Controller{
 
 		$data['view'] = 'admin/edit';
 		$this->load->model('Model_home');	
-		$data['oldInfo'] = $this->Model_home->readNew($id);
+		$data['oldInfo'] = $this->Model_home->EditNew($id);
 		$data['loadData'] = $this->Model_admin->loadData($id);
 		$this->load->view('admin/template', $data);
 	}
@@ -147,6 +148,12 @@ class admin extends CI_Controller{
 	public function createQuiz(){
 
 		$data['view'] = 'admin/createQuiz';
+		$this->load->view('admin/template', $data);
+	}
+
+	public function pruebas(){
+
+		$data['view'] = 'admin/pruebas';
 		$this->load->view('admin/template', $data);
 	}
 

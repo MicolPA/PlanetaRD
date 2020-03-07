@@ -9,7 +9,13 @@
 			return $query->result();
 		}
 
-		function readNew($id){
+		function readNew($id, $url){
+
+			$query = $this->db->query("SELECT * FROM noticia WHERE id = $id and url = '$url'");
+			return $query->result();
+		}
+
+		function EditNew($id){
 
 			$query = $this->db->query("SELECT * FROM noticia WHERE id = $id");
 			return $query->result();
@@ -24,6 +30,13 @@
 		function newsPerCategory($category){
 
 			$query = $this->db->query("SELECT * FROM noticia WHERE categoria = '$category'");
+			return $query->result();
+		}
+
+		function buscar($busqueda){
+
+			$query = $this->db->query("SELECT * FROM noticia WHERE titulo LIKE '%$busqueda%' or resumen LIKE '%$busqueda%'");
+			
 			return $query->result();
 		}
 
