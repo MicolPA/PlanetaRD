@@ -68,9 +68,9 @@
           </form>
         </div>
       </div>
-      
     </div>
- <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -109,7 +109,7 @@
 		<?php $this->load->view($view);?>
 	</div>
 
-  <footer class="bg-dark pt-4 pb-4">
+  <footer class="bg-dark pt-4 pb-4" style="margin-bottom: -30px">
     <p class="text-white text-center">
       PlanetaRD 
     </p>

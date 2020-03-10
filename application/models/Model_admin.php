@@ -29,7 +29,7 @@ class Model_admin extends CI_Model
 
 	function listNews(){
 
-		$query = $this->db->query('SELECT * FROM noticia ORDER BY id DESC');
+		$query = $this->db->query('SELECT * FROM noticia ORDER BY id DESC limit 20');
 		return $query->result();
 
 	}

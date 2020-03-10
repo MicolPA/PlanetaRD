@@ -9,43 +9,22 @@
     <div class="col-lg-8">
         <?php foreach ($news as $data): ?>
            <div class="col-lg-12 p-3 mb-3 border">
-                <h5><?php echo $data->titulo ?></h5>
-                <p><?php echo $data->resumen ?>...</p>
-                <a href="<?php echo base_url('admin/edit/') . $data->id ?>" class="font-weight-bold linkB" style="">Editar</a>
-                <a href="javascript:deleteNews(<?php echo $data->id ?>)" class="font-weight-bold linkR">Borrar</a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="<?php echo base_url('assets/images/') . $data->portada ?>" width='100%' height ='190px'>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="font-weight-bold"><?php echo $data->titulo ?></h5>
+                        <p class="h6 mb-4"><?php echo substr($data->resumen, 0, 250) ?>...</p>
+                        <a href="<?php echo base_url('admin/edit/') . $data->id ?>" class="font-weight-bold btn btn-primary btn-sm" style="">Editar</a>
+                         <a href="javascript:deleteNews(<?php echo $data->id ?>)" class="font-weight-bold btn btn-danger btn-sm">Borrar</a>
+                    </div>
+                </div>
+                
             </div> 
         <?php endforeach ?>
         
-
-
-
-    <style>
-        .linkB{
-            border-bottom: 2px solid #0072FF;
-            color: black;
-        }
-
-        .linkB:hover{
-            background: #0072FF;
-            color:white;
-            text-decoration: none;
-            padding: 4px;
-        }
-
-        .linkR{
-            border-bottom: 2px solid red;
-            color: black;
-        }
-
-        .linkR:hover{
-            background: red;
-            color:white;
-            text-decoration: none;
-            padding: 4px;
-        }
-    </style>
-
     </div>
     
-    <div class="col-lg-4">3</div>
+    <div class="col-lg-4"></div>
 </div>

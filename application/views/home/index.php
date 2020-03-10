@@ -59,7 +59,7 @@
 						<div class="divimg" style="background:url(<?php echo base_url('assets/images/') . $news->portada ?>); ">
 						imagen here	
 						</div>
-						<h4 ><?php echo $news->titulo ?></h4>
+						<h4 class="pt-2"><?php echo $news->titulo ?></h4>
 						<p class="h6"><?php echo substr($news->resumen, 0, 90) ?>...</p>
 						<span class="h6 badge bg-primary text-white"><?php echo $news->categoria ?></span>
 					</a>

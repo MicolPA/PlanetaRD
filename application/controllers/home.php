@@ -49,6 +49,7 @@ class Home extends CI_Controller{
 	function noticia($url){
 
 		$data['view'] = 'home/noticia';
+		$data['fecha'] = $this->getFecha();
 		
 		if ($_GET['id']) {
 			$data['readNew'] = $this->Model_home->readNew($_GET['id'], $url);
@@ -70,6 +71,7 @@ class Home extends CI_Controller{
 		$data['title'] = $category;
 		$data['view'] = 'home/category';
 		$data['image'] ='';
+		$data['fecha'] = $this->getFecha();
 		$data['newsPerCategory'] = $this->Model_home->newsPerCategory($category);
 		$this->load->view('home/template', $data);
 	}
@@ -78,6 +80,7 @@ class Home extends CI_Controller{
 
 		$data['title'] = 'Resultados de la busqueda';
 		$data['view'] = 'home/buscar';
+		$data['fecha'] = $this->getFecha();
 		$data['busqueda'] = $this->Model_home->buscar($_GET['busqueda']);
 		$this->load->view('home/template', $data);
 	}

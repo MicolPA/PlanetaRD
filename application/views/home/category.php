@@ -11,9 +11,12 @@
 			<?php foreach ($newsPerCategory as $news): ?>
 				<div class="col-lg-4 p-2 divNews">
 					<a class="link-articles" href="<?php echo base_url() . 'home/noticia/' . $news->url . '?id=' . $news->id?>">
-						<img src="<?php echo base_url('assets/images/') . $news->portada ?>" width='100%'>
-						<h4 class="text-primary"><?php echo $news->titulo ?></h4>
-						<p><?php echo $news->resumen ?></p>
+						<div class="divimg" style="background:url(<?php echo base_url('assets/images/') . $news->portada ?>); ">
+						imagen here	
+						</div>
+						<h4 class="pt-2"><?php echo $news->titulo ?></h4>
+						<p class="h6"><?php echo substr($news->resumen, 0, 90) ?>...</p>
+						<span class="h6 badge bg-primary text-white"><?php echo $news->categoria ?></span>
 					</a>
 				</div>
 			<?php endforeach ?>

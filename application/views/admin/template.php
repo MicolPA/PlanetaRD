@@ -19,7 +19,7 @@
       <div class="container-fluid pl-4">
         <a class="navbar-brand" href="<?php echo base_url('admin') ?>">PlanetaRD | <small>Admin</small></a>
         <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav">
             <li class="nav-item text-right">
               <a class="btn btn-primary mr-2" href="<?php echo base_url('admin/create') ?>">Nueva noticia <span class="sr-only">(current)</span></a>
             </li>
